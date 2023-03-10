@@ -4,7 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class indexController extends Controller
+class IndexController extends Controller
 {
-    //
+    public function index (){
+        return inertia(
+            'Welcome',
+            [
+                'message' => "true"
+            ]
+        );
+    }
 }

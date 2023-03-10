@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\TesteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return inertia('Welcome');
-});
+Route::get('/', [IndexController::class, 'index']);
 
-Route::get('/teste', function () {
-    return inertia('teste/teste');
-});
+Route::get('/teste', [TesteController::class, 'index']);
