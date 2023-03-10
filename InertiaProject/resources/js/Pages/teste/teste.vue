@@ -1,5 +1,6 @@
 <template>
-    <Link href="/teste"> Go to teste </Link>
+    <Link href="/"> Go home </Link>
+    aa
 </template>
 
 <script setup>
