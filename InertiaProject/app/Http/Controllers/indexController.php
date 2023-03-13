@@ -10,7 +10,7 @@ class IndexController extends Controller
         return inertia(
             'Welcome',
             [
-                'message' => "true"
+                'message' => 1
             ]
         );
     }

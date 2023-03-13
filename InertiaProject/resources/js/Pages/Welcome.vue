@@ -10,10 +10,7 @@
     import {Link} from '@inertiajs/vue3'
 
     defineProps({
-        message: {
-            type: [Boolean, Number],
-            required: true
-        },
+        message: Boolean,
     });
 
 </script>
