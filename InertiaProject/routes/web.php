@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\IndexController;
+use App\Http\Controllers\ItemsController;
 use App\Http\Controllers\TesteController;
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +14,11 @@ use App\Http\Controllers\TesteController;
 |
 */
 
-Route::get('/', [IndexController::class, 'index']);
+Route::get('/listing', [ItemsController::class, 'index']);
+Route::get('/create', [ItemsController::class, 'create']);
+Route::get('/edit/{id}', [ItemsController::class, 'edit']);
+
+Route::post('/create', [ItemsController::class, 'store']);
+Route::post('/edit/{id}', [ItemsController::class, 'update']);
 
 Route::get('/teste', [TesteController::class, 'index']);
