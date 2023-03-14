@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemsController;
-use App\Http\Controllers\TesteController;
+use App\Http\Controllers\AuthController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +14,11 @@ use App\Http\Controllers\TesteController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/login', [AuthController::class, 'index']);
+
+Route::post('/login', [AuthController::class, 'store']);
 
 Route::get('/listing', [ItemsController::class, 'index']);
 Route::get('/create', [ItemsController::class, 'create']);
-Route::get('/edit/{id}', [ItemsController::class, 'edit']);
 
 Route::post('/create', [ItemsController::class, 'store']);
-Route::post('/edit/{id}', [ItemsController::class, 'update']);
-
-Route::get('/teste', [TesteController::class, 'index']);
